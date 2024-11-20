@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <sys/mman.h>
 #include <stdint.h>
-
+//raspberry pi 5 peri base address
 #define MAILBOX_BASE 0xFE000000
 #define PAGE_SIZE 4096
 #define PAGE_MASK (PAGE_SIZE - 1)
@@ -45,7 +45,7 @@ int main() {
     return 0;
 }
 FAILED) {
-        perror("Failed to mmap register");
+        perror("Failed to map register");
         return NULL;
     }
 
